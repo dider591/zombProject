@@ -56,23 +56,21 @@
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\Look.cs" />
     <Compile Include="Assets\Scripts\Player\Movement.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemys.cs" />
-    <Compile Include="Assets\Scripts\Enemy\MoveState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Weapons\Dinamite.cs" />
     <Compile Include="Assets\Supercyan Character Pack Zombie Sample\Scripts\ZombieFree.cs" />
     <Compile Include="Assets\Scripts\LookCamera.cs" />
     <Compile Include="Assets\Scripts\Enemy\StateMashine\State.cs" />
     <Compile Include="Assets\Scripts\Player\InputPlayer.cs" />
     <Compile Include="Assets\Scripts\Enemy\StateMashine\EnemyStateMachine.cs" />
-    <Compile Include="Assets\Scripts\Enemy\StateMashine\Transitions\TargetDieTransition.cs" />
-    <Compile Include="Assets\Scripts\Enemy\StateMashine\Transitions\MoveTransition.cs" />
-    <Compile Include="Assets\Scripts\Enemy\StateMashine\Transition.cs" />
+    <Compile Include="Assets\Scripts\Enemy\StateMashine\Transitions\Transition.cs" />
     <Compile Include="Assets\Supercyan Character Pack Zombie Sample\Scripts\ZombieCameraLogic.cs" />
     <Compile Include="Assets\Supercyan Character Pack Zombie Sample\Scripts\ZombieCharacterControl.cs" />
     <Compile Include="Assets\Scripts\Enemy\StateMashine\Transitions\DistanceTransition.cs" />
+    <Compile Include="Assets\Scripts\Enemy\StateMashine\Transitions\TargetDieTransition.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MoveState.cs" />
     <Compile Include="Assets\Scripts\Enemy\AtackState.cs" />
     <Compile Include="Assets\Scripts\Enemy\CeleborationState.cs" />
-    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Supercyan Character Pack Zombie Sample\Shaders\Legacy\CelShader.shader" />
