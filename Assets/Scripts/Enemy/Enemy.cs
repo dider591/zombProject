@@ -4,15 +4,26 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Animator))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _health;
-    [SerializeField] private int _revard;
-    [SerializeField] private Player _target;  
 
+    private Player _target;
+    private Animator _animator;
     public Player Target => _target;
 
-    public event UnityAction Dying;
+    public event UnityAction<Enemy> Dying;
+
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
+    public void Init(Player target)
+    {
+        _target = target;
+    }
 
     public void TakeDamage(int damage)
     {
@@ -20,7 +31,9 @@ public class Enemy : MonoBehaviour
 
         if (_health <= 0)
         {
-            Destroy(gameObject);
+            Dying.Invoke(this);
+            _animator.Play("Die");
+            Destroy(gameObject);            
         }
     }
 }

@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Dinamite : MonoBehaviour
+public class Dinamite : Weapon
 {
-    [SerializeField] private int _damage;
-    
-    private void OnCollisionEnter(Collision collision)
+    [SerializeField] private GameObject _effect;
+
+    private void OnTriggerEnter(Collider trigger)
     {
-        if (collision.collider.TryGetComponent(out Enemy enemy))
+        if (trigger.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            enemy.TakeDamage(_damage);
+            Instantiate(_effect, transform.position, transform.rotation);
+            enemy.TakeDamage(Damage);
             Destroy(gameObject);
         }
-    }
+    }   
 }
 

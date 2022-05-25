@@ -19,6 +19,7 @@ public class MoveState : State
 
     private void Update()
     {
+        _animator.Play("Walk");
         _agent.SetDestination(Target.transform.position);
     }
 }

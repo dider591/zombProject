@@ -7,6 +7,7 @@ public class AtackState : State
 {
     [SerializeField] private int _damage;
     [SerializeField] private float _delay;
+    [SerializeField] private float _transitionRange;
 
     private float _lastAttackTime;
     private Animator _animator;
@@ -30,7 +31,12 @@ public class AtackState : State
     private void Attack(Player target)
     {
         _animator.Play("Attack");
-        target.ApplyDamage(_damage);
+
+        if (Vector3.Distance(transform.position, Target.transform.position) < _transitionRange)
+        {
+            target.ApplyDamage(_damage);
+        }
+        
     }
 
     private void StopAttack()

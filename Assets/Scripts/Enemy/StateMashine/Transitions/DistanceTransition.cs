@@ -18,9 +18,5 @@ public class DistanceTransition : Transition
         {
             NeedTransit = true;
         }
-        if (Vector3.Distance(transform.position, Target.transform.position) >= _transitionRange)
-        {
-            NeedTransit = false;
-        }
     }
 }
