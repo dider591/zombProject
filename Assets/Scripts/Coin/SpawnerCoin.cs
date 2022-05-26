@@ -17,5 +17,4 @@ public class SpawnerCoin : MonoBehaviour
             Instantiate(_coin, point.position, point.rotation, point);
         }
     }
-
 }

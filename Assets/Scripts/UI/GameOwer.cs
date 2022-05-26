@@ -9,7 +9,6 @@ public class GameOwer : MonoBehaviour
     [SerializeField] private SpawnerCoin _spawnerCoin;
     [SerializeField] private UnityEvent _stopGame;
 
-
     private void OnEnable()
     {
         _player.ManeyCountChanged += OnVCoinChanged;
@@ -20,13 +19,13 @@ public class GameOwer : MonoBehaviour
     {
         if (_spawnerCoin.CoinCount < value)
         {
-            _stopGame.Invoke();
+            _stopGame?.Invoke();
         }
     }
 
     private void DiedPlayer()
     {
-        _stopGame.Invoke();
+        _stopGame?.Invoke();
     }
 
     private void OnDisable()

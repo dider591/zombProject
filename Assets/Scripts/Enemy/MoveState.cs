@@ -9,6 +9,8 @@ public class MoveState : State
 {
     [SerializeField] private NavMeshAgent _agent;
 
+    private int Walk = Animator.StringToHash("Walk");
+
     private Animator _animator;
 
     private void Start()
@@ -19,7 +21,7 @@ public class MoveState : State
 
     private void Update()
     {
-        _animator.Play("Walk");
+        _animator.Play(Walk);
         _agent.SetDestination(Target.transform.position);
     }
 }

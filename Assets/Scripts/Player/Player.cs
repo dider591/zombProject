@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
     public int Health { get; private set; }
     public int Dinamite => _dinamiteCount;
 
-
-    private int _currentHealth;
+    private int _startHealth;
+    private int _currentHealth;   
 
     public int CurrentHealth => _currentHealth;
 
@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        Health = 10;
+        Health = _startHealth;
         _currentHealth = Health;
     }
 
@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
-            OnDied.Invoke();
+            OnDied?.Invoke();
         }
     }
 

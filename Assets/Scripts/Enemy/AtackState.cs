@@ -11,6 +11,7 @@ public class AtackState : State
 
     private float _lastAttackTime;
     private Animator _animator;
+    private int AttackAnimation = Animator.StringToHash("Attack");
 
     private void Start()
     {
@@ -30,7 +31,7 @@ public class AtackState : State
 
     private void Attack(Player target)
     {
-        _animator.Play("Attack");
+        _animator.Play(AttackAnimation);
 
         if (Vector3.Distance(transform.position, Target.transform.position) < _transitionRange)
         {

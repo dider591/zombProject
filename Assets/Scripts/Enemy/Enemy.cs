@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
 
         if (_health <= 0)
         {
-            Dying.Invoke(this);
+            Dying?.Invoke(this);
             _animator.Play("Die");
             Destroy(gameObject);            
         }
