@@ -6,6 +6,7 @@ using UnityEngine;
 public class CeleborationState : State
 {
     private Animator _animator;
+    private int Celeboration = Animator.StringToHash("Celeboration");
 
     private void Awake()
     {
@@ -14,7 +15,7 @@ public class CeleborationState : State
 
     private void OnEnable()
     {
-        _animator.Play("Celeboration");
+        _animator.Play(Celeboration);
     }
 
     private void OnDisable()

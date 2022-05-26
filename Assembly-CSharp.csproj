@@ -73,10 +73,11 @@
     <Compile Include="Assets\Scripts\Enemy\StateMashine\Transitions\LookDistanceTransition.cs" />
     <Compile Include="Assets\Scripts\Enemy\StateMashine\Transitions\Transition.cs" />
     <Compile Include="Assets\Supercyan Character Pack Zombie Sample\Scripts\ZombieCameraLogic.cs" />
-    <Compile Include="Assets\Scripts\Player\Throw.cs" />
+    <Compile Include="Assets\Scripts\Player\Thrower.cs" />
     <Compile Include="Assets\Supercyan Character Pack Zombie Sample\Scripts\ZombieCharacterControl.cs" />
     <Compile Include="Assets\Scripts\Elexir\SpawnerElexir.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\UI\GameOwer.cs" />
     <Compile Include="Assets\Scripts\Enemy\StateMashine\Transitions\DistanceTransition.cs" />
     <Compile Include="Assets\Scripts\Enemy\StateMashine\Transitions\MoveTranstion.cs" />
     <Compile Include="Assets\Scripts\Enemy\AtackState.cs" />
@@ -86,7 +87,6 @@
     <Compile Include="Assets\Scripts\Coin\Coin.cs" />
     <Compile Include="Assets\Scripts\Enemy\Spawner.cs" />
     <Compile Include="Assets\Scripts\Enemy\AwaitingState.cs" />
-    <Compile Include="Assets\Scripts\UI\GameOwer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

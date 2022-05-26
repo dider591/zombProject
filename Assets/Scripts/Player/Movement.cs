@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     private Vector2 _direction;
     private Vector3 _targetVector;
     private InputPlayer _input;
+    private int Run = Animator.StringToHash("Run");
 
     private void Start()
     {
@@ -34,9 +35,9 @@ public class Movement : MonoBehaviour
         transform.position += move * scaleMovespeed;
 
         if (targetVector.x != 0 || targetVector.z != 0) 
-            _playerAnimator.SetBool("Run", true);
+            _playerAnimator.SetBool(Run, true);
             
         else
-            _playerAnimator.SetBool("Run", false);         
+            _playerAnimator.SetBool(Run, false);         
     }
 }

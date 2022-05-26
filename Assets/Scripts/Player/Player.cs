@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public int Health { get; private set; }
     public int Dinamite => _dinamiteCount;
 
-    private int _startHealth;
+    private int _startHealth = 10;
     private int _currentHealth;   
 
     public int CurrentHealth => _currentHealth;
